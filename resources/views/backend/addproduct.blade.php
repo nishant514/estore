@@ -95,7 +95,7 @@
   </aside>
   <!-- /.control-sidebar -->
 </div>
-<
+
 <script type="text/javascript">
 $(document).ready(function () {
   bsCustomFileInput.init();

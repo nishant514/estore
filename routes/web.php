@@ -12,7 +12,7 @@
 */
 
 // Route::get('/', function () {
-//     return view('auth/login');
+// return view('auth/login');
 // });
 
 Route::get('/', function () {
@@ -39,15 +39,15 @@ Route::get('/logout', 'DashboardController@adminlogout');
 Route::get('/profile', 'ProfileController@profile');
 Route::get('/delete/{id}', 'ProfileController@destroy');
 Route::get('/edit/{id}', 'ProfileController@edit');
-Route::get('addcategory', 'AddCatageoryController@addcategory');
-Route::post('addcategory', 'AddCatageoryController@category');
+Route::get('addcategory', 'AddCatageoryController@category');
+Route::post('addcategory', 'AddCatageoryController@addcategory');
 Route::get('viewcategory', 'AddCatageoryController@viewcategory');
 Route::get('/products', 'AddProductController@products');
 Route::post('/products', 'AddProductController@addproduct');
 Route::get('/viewproduct', 'AddProductController@viewproduct');
 
 
-Route::get('/product', 'ProductController@productlist');
+// Route::get('/product', 'ProductController@productlist');
 Route::get('/productdetail', 'ProductDetailController@productdetail');
 Route::get('/cart', 'CartController@cart');
 Route::get('/checkout', 'CheckoutController@checkout');
@@ -69,6 +69,10 @@ Route::get('/contact', function () {
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallback');
 
+
+Route::middleware('auth:web', 'throttle:5|10,1')->group(function () {
+   Route::get('/product', 'ProductController@productlist');
+});
 
 
 /*

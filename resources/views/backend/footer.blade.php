@@ -30,5 +30,5 @@
 <script src="{{url('/')}}/assets/plugins/chart.js/Chart.min.js"></script>
 
 <!-- PAGE SCRIPTS -->
-<script src="{{url('/')}}/assets/dist/js/pages/dashboard2.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- <script src="{{url('/')}}/assets/dist/js/pages/dashboard2.js"></script>
+ --><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

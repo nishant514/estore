@@ -7,7 +7,7 @@ use App\Category;
 use Auth;
 class AddCatageoryController extends Controller
 {
-    public function addcategory(){
+    public function category(){
        if( Auth::check() )
                 {
                 
@@ -22,24 +22,31 @@ class AddCatageoryController extends Controller
                 return redirect('/');
                 }
                 }   
-       // return view('backend/addcategory');
+     
     
     }
 
-    public function category(Request $req){
+    public function addcategory(Request $req){
     	//dd($req->all());
     	 $addcategory=new Category;
     	 $addcategory->name=$req->name;
     	  $addcategory->discription=$req->discription;
         $addcategory->price=$req->price;
        
-      $imageName=$req->image->getClientOriginalName();  
-      $req->image->move(public_path('images'), $imageName);
-       $addcategory->image=$imageName;
+      // $imageName=$req->image->getClientOriginalName();  
+      // $req->image->move(public_path('images'), $imageName);
+      //  $addcategory->image=$imageName;
       
     	 $addcategory->save();
+          return response()->json(
+                    [
+                    'success' => true,
+                    'message' => 'Data inserted successfully'
+                    ]
+                    );
            
-         return redirect('addcategory');
+       // return redirect('addcategory');
+         
     	
     }
 
