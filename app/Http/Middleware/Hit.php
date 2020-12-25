@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class User
+class Hit
 {
     /**
      * Handle an incoming request.
@@ -15,6 +15,6 @@ class User
      */
     public function handle($request, Closure $next)
     {
-        return $next($request->product);
+        return $next($request);     
     }
 }

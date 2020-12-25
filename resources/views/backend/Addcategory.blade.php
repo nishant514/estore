@@ -42,7 +42,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form  enctype="multipart/form-data" method="post" id="cform" >
+              <form  enctype="multipart/form-data" method="post" id="myform" >
                 <input type = "hidden" name = "_token" id="csrf" value = "<?php echo csrf_token(); ?>">
                 <!--  @csrf -->
                 <div class="card-body">
@@ -70,7 +70,7 @@
                     </div>
                   </div>
 
-                  <!--  <input type="file" name="image"> -->
+                   <input type="file" name="image" id="image"> 
 
                   <div class="form-check">
 
@@ -101,55 +101,40 @@
     </div>
   </div>
 
+<script>
+$(document).ready(function() {
+$('#butsave').on('click', function() {
 
-  <script>
-    $(document).ready(function() {
+var fd = new FormData();
+var files = $('#image')[0].files[0];
+fd.append('image',files);
 
-      $('#butsave').on('click', function() {
-        var name = $('#name').val();
-        var discription = $('#discription').val();
-        var price = $('#price').val();
+var formData = new FormData(document.getElementById("myform"));
 
-        var url = "{{url('addcategory')}}";
+$.ajax({
+url: "{{url('addcategory') }}",
+type: "POST",
+data: formData,
+contentType: false,
+processData: false,
+cache: false,
+success:function(response)
+{
 
-        if(name!="" && discription!="" && price!=""){
+if(response.success==1){
+$('#success').show();
+$('#myform')[0].reset();
+}else{
+alert("Error");
+}
+},
+error:function(error)
+{
 
-          alert('not null');
-          $.ajax({
-            url: url,
-            type: "POST",
-            data: {
+alert('something get wrong');
+}
+});
 
-              _token: $("#csrf").val(),
-              name: name,
-              discription: discription,
-              price: price,
-
-            },
-            cache: false,
-
-
-            success:function(response){
-
-
-              if(response.success){
-                alert(response.message) 
-                $("#cform")[0].reset();
-               
-              }else{
-                alert("Error")
-              }
-            },
-            error:function(error){
-              console.log(error)
-            }
-
- 
-        });
-      }
-      else{
-      alert('Please fill all the field !');
-      }
-      });
-      });
-        </script>
+});
+});
+</script>
