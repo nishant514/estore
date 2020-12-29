@@ -56,3 +56,27 @@ public function viewproduct(){
 
 }
 }
+//multiple image
+// if($request->hasfile('image'))
+// {
+// foreach($request->file('image') as $file)
+// {
+// $name = time().rand(1,100).'.'.$file->extension();
+// //$file->move(public_path('products'), $name);
+// $file->move(public_path().'/products/', $name);
+// $data[] = $name;
+// }
+// }
+
+// $create->prouct_name=$request->prouct_name;
+// $create->prouct_desc=$request->prouct_desc;
+// $create->price=$request->price;
+// $create->qty=$request->qty;
+
+// // $file->filenames=json_encode($data);
+// // $imageName = $request->image->getClientOriginalName();
+// // $request->image->move(public_path('products'), $imageName);
+// $create->image=json_encode($data);
+// $create->save();
+
+// return redirect('admin/product');

@@ -122,7 +122,7 @@
                             <div class="col-md-4">
                                 <div class="product-item">
                                     <div class="product-title">
-                                        <a href="#">{{$val->name}}</a>
+                                        <a href="productdetail/{{$val->id}}">{{$val->name}}</a>
                                         <div class="ratting">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>

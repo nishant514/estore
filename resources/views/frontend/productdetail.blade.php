@@ -27,7 +27,7 @@
                     <div class="col-md-3">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="estore/img/logo.png" alt="Logo">
+                                <img src="http://localhost/estore/public/estore/img/logo.png" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -73,27 +73,24 @@
                     <div class="col-lg-8">
                         <div class="product-detail-top">
                             <div class="row align-items-center">
+                              @foreach($productdetail as $val)
                                 <div class="col-md-5">
                                     <div class="product-slider-single normal-slider">
-                                        <img src="estore/img/product-1.jpg" alt="Product Image">
-                                        <img src="estore/img/product-3.jpg" alt="Product Image">
-                                        <img src="estore/img/product-5.jpg" alt="Product Image">
-                                        <img src="estore/img/product-7.jpg" alt="Product Image">
-                                        <img src="estore/img/product-9.jpg" alt="Product Image">
-                                        <img src="estore/img/product-10.jpg" alt="Product Image">
+                                       
+                                        <img src="images/{{$val->image}}" alt="Product Image">
                                     </div>
-                                    <div class="product-slider-single-nav normal-slider">
+                                   <!--  <div class="product-slider-single-nav normal-slider">
                                         <div class="slider-nav-img"><img src="estore/img/product-1.jpg" alt="Product Image"></div>
                                         <div class="slider-nav-img"><img src="estore/img/product-3.jpg" alt="Product Image"></div>
                                         <div class="slider-nav-img"><img src="estore/img/product-5.jpg" alt="Product Image"></div>
                                         <div class="slider-nav-img"><img src="estore/img/product-7.jpg" alt="Product Image"></div>
                                         <div class="slider-nav-img"><img src="estore/img/product-9.jpg" alt="Product Image"></div>
                                         <div class="slider-nav-img"><img src="estore/img/product-10.jpg" alt="Product Image"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="col-md-7">
                                     <div class="product-content">
-                                        <div class="title"><h2>Product Name</h2></div>
+                                       <div class="title"><h2>{{$val->name}}</h2></div> 
                                         <div class="ratting">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -136,6 +133,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                         
@@ -345,7 +343,7 @@
                                         </div>
                                         <div class="product-image">
                                             <a href="product-detail.html">
-                                                <img src="estore/img/product-2.jpg" alt="Product Image">
+                                                <img src="http://localhost/estore/public/estore/img/product-2.jpg" alt="Product Image">
                                             </a>
                                             <div class="product-action">
                                                 <a href="#"><i class="fa fa-cart-plus"></i></a>
@@ -429,7 +427,7 @@
                                     </div>
                                     <div class="product-image">
                                         <a href="product-detail.html">
-                                            <img src="estore/img/product-8.jpg" alt="Product Image">
+                                            <img src="http://localhost/estore/public/estore/img/product-8.jpg" alt="Product Image">
                                         </a>
                                         <div class="product-action">
                                             <a href="#"><i class="fa fa-cart-plus"></i></a>
@@ -455,7 +453,7 @@
                                     </div>
                                     <div class="product-image">
                                         <a href="product-detail.html">
-                                            <img src="estore/img/product-9.jpg" alt="Product Image">
+                                            <img src="http://localhost/estore/public/estore/img/product-9.jpg" alt="Product Image">
                                         </a>
                                         <div class="product-action">
                                             <a href="#"><i class="fa fa-cart-plus"></i></a>
@@ -503,18 +501,19 @@
                 </div>
             </div>
         </div>
+      
         <!-- Product Detail End -->
         
         <!-- Brand Start -->
         <div class="brand">
             <div class="container-fluid">
                 <div class="brand-slider">
-                    <div class="brand-item"><img src="estore/img/brand-1.png" alt=""></div>
-                    <div class="brand-item"><img src="estore/img/brand-2.png" alt=""></div>
-                    <div class="brand-item"><img src="estore/img/brand-3.png" alt=""></div>
-                    <div class="brand-item"><img src="estore/img/brand-4.png" alt=""></div>
-                    <div class="brand-item"><img src="estore/img/brand-5.png" alt=""></div>
-                    <div class="brand-item"><img src="estore/img/brand-6.png" alt=""></div>
+                    <div class="brand-item"><img src="http://localhost/estore/public/estore/img/brand-1.png" alt=""></div>
+                    <div class="brand-item"><img src="http://localhost/estore/public/estore/img/brand-2.png" alt=""></div>
+                    <div class="brand-item"><img src="http://localhost/estore/public/estore/img/brand-3.png" alt=""></div>
+                    <div class="brand-item"><img src="http://localhost/estore/public/estore/img/brand-4.png" alt=""></div>
+                    <div class="brand-item"><img src="http://localhost/estore/public/estore/img/brand-5.png" alt=""></div>
+                    <div class="brand-item"><img src="http://localhost/estore/public/estore/img/brand-6.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -577,15 +576,15 @@
                     <div class="col-md-6">
                         <div class="payment-method">
                             <h2>We Accept:</h2>
-                            <img src="estore/img/payment-method.png" alt="Payment Method" />
+                            <img src="http://localhost/estore/public/estore/img/payment-method.png" alt="Payment Method" />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="payment-security">
                             <h2>Secured By:</h2>
-                            <img src="estore/img/godaddy.svg" alt="Payment Security" />
-                            <img src="estore/img/norton.svg" alt="Payment Security" />
-                            <img src="estore/img/ssl.svg" alt="Payment Security" />
+                            <img src="http://localhost/estore/public/estore/img/godaddy.svg" alt="Payment Security" />
+                            <img src="http://localhost/estore/public/estore/img/norton.svg" alt="Payment Security" />
+                            <img src="http://localhost/estore/public/estore/img/ssl.svg" alt="Payment Security" />
                         </div>
                     </div>
                 </div>
