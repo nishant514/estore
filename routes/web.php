@@ -77,6 +77,9 @@ Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallb
 Route::get('mail', 'MailController@index');
 Route::post('mail', 'MailController@send');
 
+Route::get('session/get','SessionController@accessSessionData');
+Route::get('session/set','SessionController@storeSessionData');
+Route::get('session/remove','SessionController@deleteSessionData');
 
 //hit count
 // Route::group(['middleware' => ['throttle:3|5,1']], function () {
