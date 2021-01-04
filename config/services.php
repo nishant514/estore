@@ -46,4 +46,5 @@ return [
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
         'redirect' =>'http://localhost:8000/login/linkedin/callback',
     ],
+  
 ];

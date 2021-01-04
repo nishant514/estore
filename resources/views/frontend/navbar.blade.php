@@ -9,11 +9,11 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
                     <a href="http://127.0.0.1:8000" class="nav-item nav-link active">Home</a>
-                    <a href="product" class="nav-item nav-link ">Products</a>
-                    <a href="productdetail" class="nav-item nav-link">Product Detail</a>
-                    <a href="cart" class="nav-item nav-link">Cart</a>
-                    <a href="checkout" class="nav-item nav-link">Checkout</a>
-                    <a href="myaccount" class="nav-item nav-link">My Account</a>
+                    <a href="{{url('/product')}}" class="nav-item nav-link ">Products</a>
+                   <!--  <a href="{{url('/pro')}}" class="nav-item nav-link">Product Detail</a> -->
+                    <a href="{{url('/cart')}}" class="nav-item nav-link">Cart</a>
+                    <a href="{{url('/checkout')}}" class="nav-item nav-link">Checkout</a>
+                    <a href="{{url('/myaccount')}}" class="nav-item nav-link">My Account</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                         <div class="dropdown-menu">

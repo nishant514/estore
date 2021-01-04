@@ -49,8 +49,10 @@ Route::get('/viewproduct', 'AddProductController@viewproduct');
 
 
 Route::get('/product', 'ProductController@productlist');
-Route::get('/productdetail/{id}', 'ProductDetailController@productdetail');
+Route::get('productdetail-{id}', 'ProductDetailController@productdetail');
 Route::get('/cart', 'CartController@cart');
+Route::post('addcart', 'CartController@addcart');
+Route::get('/destroy/{id}', 'CartController@destroy');
 Route::get('/checkout', 'CheckoutController@checkout');
 Route::get('/myaccount', 'MyAccountController@myaccount');
 Route::get('/wishlist', 'MorePagesController@wishlist');
@@ -74,7 +76,6 @@ Route::get('login/{provider}/callback','Auth\LoginController@handleProviderCallb
 
 Route::get('mail', 'MailController@index');
 Route::post('mail', 'MailController@send');
-
 
 
 //hit count

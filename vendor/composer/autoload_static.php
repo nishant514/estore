@@ -32,6 +32,7 @@ class ComposerStaticInit0178db735496d4bc2efb29235d5086dd
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        '65966401fe9011225a1878c3ea034262' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Utilities.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -126,6 +127,8 @@ class ComposerStaticInit0178db735496d4bc2efb29235d5086dd
         ),
         'I' => 
         array (
+            'Instamojo\\Exceptions\\' => 21,
+            'Instamojo\\' => 10,
             'Illuminate\\' => 11,
         ),
         'G' => 
@@ -380,6 +383,14 @@ class ComposerStaticInit0178db735496d4bc2efb29235d5086dd
         array (
             0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
         ),
+        'Instamojo\\Exceptions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Exceptions',
+        ),
+        'Instamojo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/instamojo/instamojo-php/src',
+        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -476,6 +487,7 @@ class ComposerStaticInit0178db735496d4bc2efb29235d5086dd
     );
 
     public static $classMap = array (
+        'App\\Cart' => __DIR__ . '/../..' . '/app/Cart.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -494,6 +506,7 @@ class ComposerStaticInit0178db735496d4bc2efb29235d5086dd
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\MailController' => __DIR__ . '/../..' . '/app/Http/Controllers/MailController.php',
         'App\\Http\\Controllers\\MorePagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/MorePagesController.php',
         'App\\Http\\Controllers\\MyAccountController' => __DIR__ . '/../..' . '/app/Http/Controllers/MyAccountController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
@@ -503,10 +516,12 @@ class ComposerStaticInit0178db735496d4bc2efb29235d5086dd
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
+        'App\\Http\\Middleware\\Hit' => __DIR__ . '/../..' . '/app/Http/Middleware/Hit.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Mail\\SendMail' => __DIR__ . '/../..' . '/app/Mail/SendMail.php',
         'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -2349,6 +2364,13 @@ class ComposerStaticInit0178db735496d4bc2efb29235d5086dd
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Instamojo\\Exception\\InvalidRequestException' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Exceptions/InvalidRequestException.php',
+        'Instamojo\\Exceptions\\ActionForbiddenException' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Exceptions/ActionForbiddenException.php',
+        'Instamojo\\Exceptions\\ApiException' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Exceptions/ApiException.php',
+        'Instamojo\\Exceptions\\AuthenticationException' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Exceptions/AuthenticationException.php',
+        'Instamojo\\Exceptions\\InstamojoException' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Exceptions/InstamojoException.php',
+        'Instamojo\\Exceptions\\MissingParameterException' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Exceptions/MissingParameterException.php',
+        'Instamojo\\Instamojo' => __DIR__ . '/..' . '/instamojo/instamojo-php/src/Instamojo.php',
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',

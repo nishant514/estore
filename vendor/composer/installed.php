@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '20fc1302007a9a5236d2788d63a3d5b755197ab2',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -365,6 +365,15 @@
         0 => 'v6.20.6',
       ),
     ),
+    'instamojo/instamojo-php' => 
+    array (
+      'pretty_version' => '1.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '58564617b3f8828b2057274b0f6e7384e4740d33',
+    ),
     'jakub-onderka/php-console-color' => 
     array (
       'pretty_version' => 'v0.2',
@@ -401,12 +410,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '20fc1302007a9a5236d2788d63a3d5b755197ab2',
     ),
     'laravel/socialite' => 
     array (

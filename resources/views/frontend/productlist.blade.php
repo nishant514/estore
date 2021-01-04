@@ -122,7 +122,7 @@
                             <div class="col-md-4">
                                 <div class="product-item">
                                     <div class="product-title">
-                                        <a href="productdetail/{{$val->id}}">{{$val->name}}</a>
+                                        <a href="productdetail-{{$val->id}}">{{$val->name}}</a>
                                         <div class="ratting">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -136,7 +136,15 @@
                                             <img src="images/{{$val->image}}" alt="Product Image">
                                         </a>
                                         <div class="product-action">
-                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                            <!-- <a href="#"><i class="fa fa-cart-plus"></i></a> -->
+                                            <form action="addcart" method="post" enctype="multipart/form-data">
+                                               @csrf
+                                                <input type="hidden" name="productname" value="{{$val->name}}">
+                                                <input type="hidden" name="price" value="price">
+                                                 <input type="hidden" name="image" value="{{$val->image}}">
+                                            <button type="submit" class="btn"><i class="fa fa-shopping-cart"></i></button>
+                                             
+                                            </form>
                                             <a href="#"><i class="fa fa-heart"></i></a>
                                             <a href="#"><i class="fa fa-search"></i></a>
                                         </div>
