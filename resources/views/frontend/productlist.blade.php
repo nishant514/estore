@@ -139,8 +139,9 @@
                                             <!-- <a href="#"><i class="fa fa-cart-plus"></i></a> -->
                                             <form action="addcart" method="post" enctype="multipart/form-data">
                                                @csrf
+                                                <input type="hidden" name="id" value="{{$val->id}}">
                                                 <input type="hidden" name="productname" value="{{$val->name}}">
-                                                <input type="hidden" name="price" value="price">
+                                                <input type="hidden" name="price" value="{{$val->price}}">
                                                  <input type="hidden" name="image" value="{{$val->image}}">
                                             <button type="submit" class="btn"><i class="fa fa-shopping-cart"></i></button>
                                              

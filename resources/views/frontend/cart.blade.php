@@ -87,8 +87,7 @@
                                         </tr>
                                     </thead>
                                     <form>
-                                        @if($userId = null)
-
+                                    
                                          @foreach($cart as $val)
                                             <tbody class="align-middle">
                                             <tr>
@@ -111,32 +110,6 @@
                                         </tr>
                                        </tbody>
                                           @endforeach
-                                        
-                                         @else
-                                    @foreach($cart as $val)
-                                    <tbody class="align-middle">
-                                        <tr>
-                                            <td>
-                                                <div class="img">
-                                                    <a href="#"><img src="images/{{$val->image}}" alt="Image"></a>
-                                                    <p>{{$val->productname}}</p>
-                                                </div>
-                                            </td>
-                                            <td>{{$val->price}}</td>
-                                            <td>
-                                                <div class="qty">
-                                                    <button class="btn-minus"><i class="fa fa-minus"></i></button>
-                                                    <input type="text" value="1">
-                                                    <button class="btn-plus"><i class="fa fa-plus"></i></button>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                            <td><a href="destroy/{{$val->id}}"><i class="fa fa-trash"></i></a></td>
-                                        </tr>
-                                       </tbody>
-                                    @endforeach
-                                       
-                                       @endif
                                 </table>
                             </div>
                         </div>
